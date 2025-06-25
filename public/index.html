@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Notes</h1>
+            <button id="newNoteBtn" class="btn btn-primary">+ New Note</button>
+        </header>
+
+        <div class="main-content">
+            <!-- Notes List -->
+            <div class="notes-sidebar">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search notes..." class="search-input">
+                </div>
+                <div id="notesList" class="notes-list">
+                    <!-- Notes will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Note Editor -->
+            <div class="note-editor">
+                <div id="emptyState" class="empty-state">
+                    <h2>Welcome to Notes App</h2>
+                    <p>Select a note to view or create a new one to get started.</p>
+                </div>
+
+                <div id="noteForm" class="note-form" style="display: none;">
+                    <div class="form-header">
+                        <input type="text" id="noteTitle" placeholder="Note title..." class="title-input">
+                        <div class="form-actions">
+                            <button id="saveBtn" class="btn btn-success">Save</button>
+                            <button id="deleteBtn" class="btn btn-danger" style="display: none;">Delete</button>
+                            <button id="cancelBtn" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                    <textarea id="noteContent" placeholder="Start writing your note..." class="content-textarea"></textarea>
+                    <div class="note-meta">
+                        <span id="noteMeta" class="meta-text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loadingIndicator" class="loading" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
